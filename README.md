@@ -5,7 +5,7 @@
 ## 前提条件の確認
 
 **利用規約への同意**
-1. 規約をよく読んでGoogle Formから回答してください。
+1. 規約をよく読んで[Google Form](https://forms.gle/BNKA2NErzTxNCvux8)から回答してください。
 2. 承認等は行いませんので、回答を以て使用を開始できるものとします。
 
 ## 環境設定
@@ -53,7 +53,7 @@
 {
   "SERVER_HOSTNAME": "sample-workspace.cloud.databricks.com",
   "DATABRICKS_HOST": "https://sample-workspace.cloud.databricks.com/",
-  "ENDPOINT_NAME": "dummy-model-endpoint",
+  "ENDPOINT_NAME": "databricks-claude-3-7-sonnet",
   "CATALOG": "example_catalog",
   "SCHEMA": "test_schema",
   "WAREHOUSE_ID": "a1b2c3d4e5f6g7h8",
@@ -77,6 +77,7 @@
   1. サイドバーの「**Machine Learning**」をクリック
   2. 「**モデルサービング**」タブを選択
   3. 使用するエンドポイントの名前をコピー
+  4. 「databricks-claude-3-7-sonnet」の使用を強く推奨します
 
 - **CATALOG**と**SCHEMA**：
   1. サイドバーの「**Data**」をクリック
