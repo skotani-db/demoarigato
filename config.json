@@ -1,0 +1,11 @@
+{
+  "SERVER_HOSTNAME": "sample-workspace.cloud.databricks.com",
+  "DATABRICKS_HOST": "https://sample-workspace.cloud.databricks.com/",
+  "ENDPOINT_NAME": "dummy-model-endpoint",
+  "CATALOG": "example_catalog",
+  "SCHEMA": "test_schema",
+  "WAREHOUSE_ID": "a1b2c3d4e5f6g7h8",
+  "CLUSTER_ID": "1234-567890-abcdef",
+  "USER_NAME": "example.user@company.com",
+  "ROOT_DIR": "/Workspace/Users/example.user@company.com/projects"
+}

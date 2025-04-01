@@ -1,0 +1,71 @@
+{
+  "name": "ETL_and_Training_Pipeline",
+  "email_notifications": {
+    "on_success": [],
+    "on_failure": [],
+    "no_alert_for_skipped_runs": false
+  },
+  "timeout_seconds": 0,
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "create_silver_1",
+      "description": "Task 1: Create Silver Layer 1",
+      "depends_on": [],
+      "sql_task": {
+        "query": {
+          "query_id": "create_silver_1"
+        },
+        "warehouse_id": "warehouse"
+      },
+      "timeout_seconds": 0
+    },
+    {
+      "task_key": "create_silver_2",
+      "description": "Task 2: Create Silver Layer 2",
+      "depends_on": [],
+      "sql_task": {
+        "query": {
+          "query_id": "create_silver_2"
+        },
+        "warehouse_id": "warehouse"
+      },
+      "timeout_seconds": 0
+    },
+    {
+      "task_key": "create_gold",
+      "description": "Task 3: Create Gold Layer",
+      "depends_on": [
+        {
+          "task_key": "create_silver_1"
+        },
+        {
+          "task_key": "create_silver_2"
+        }
+      ],
+      "sql_task": {
+        "query": {
+          "query_id": "create_gold"
+        },
+        "warehouse_id": "warehouse"
+      },
+      "timeout_seconds": 0
+    },
+    {
+      "task_key": "training_model",
+      "description": "Task 4: Model Training",
+      "depends_on": [
+        {
+          "task_key": "create_gold"
+        }
+      ],
+      "notebook_task": {
+        "notebook_path": "best_trial_notebook",
+        "source": "WORKSPACE"
+      },
+      "existing_cluster_id": "ml_cluster",
+      "timeout_seconds": 0
+    }
+  ],
+  "format": "MULTI_TASK"
+}
