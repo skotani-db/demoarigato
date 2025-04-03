@@ -1,11 +1,11 @@
 {
-  "SERVER_HOSTNAME": "sample-workspace.cloud.databricks.com",
-  "DATABRICKS_HOST": "https://sample-workspace.cloud.databricks.com/",
-  "ENDPOINT_NAME": "databricks-claude-3-7-sonnet",
-  "CATALOG": "example_catalog",
-  "SCHEMA": "test_schema",
-  "WAREHOUSE_ID": "a1b2c3d4e5f6g7h8",
-  "CLUSTER_ID": "1234-567890-abcdef",
-  "USER_NAME": "example.user@company.com",
-  "ROOT_DIR": "/Workspace/Users/example.user@company.com/demoarigato"
+    "SERVER_HOSTNAME": "e2-demo-field-eng.cloud.databricks.com",
+    "DATABRICKS_HOST": "https://e2-demo-field-eng.cloud.databricks.com/",
+    "ENDPOINT_NAME": "databricks-claude-3-7-sonnet",
+    "CATALOG": "main",
+    "SCHEMA": "default",
+    "WAREHOUSE_ID": "862f1d757f0424f7",
+    "CLUSTER_ID": "0322-083408-tpevnpxz",
+    "USER_NAME": "shotaro.kotani@databricks.com",
+    "ROOT_DIR": "/Workspace/Users/shotaro.kotani@databricks.com/demoarigato2"
 }
